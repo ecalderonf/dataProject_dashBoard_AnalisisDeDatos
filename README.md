@@ -1,10 +1,33 @@
 # dataProject_dashBoard_AnalisisDeDatos
 
-📊 Análisis Descriptivo Inicial del Dataset
+# 🧱 Estructura del fichero excel
+
+  ## 📄  *Hoja 1 → tblPosts* 
+  Tabla estructurada del dataset seleccionado para el proyecto.
+
+     📐 Métrica clave creadas en la tabla original
+      - Columnas nuevas (calculadas):
+        Interactions = Likes + Shares + Comments
+        Engagement_Rate = Interactions / Views
+
+  ## 📄  *Hoja 2 → dat_validaciones*
+  Validación de datos originales: quitar duplicados, validar que no contenga datos vacios, etc.
+
+  ## 📄  *Hoja 3 → Base_Pivot*
+  Tablas dinámicas que alimentan al dashboard
+
+  ## 📄  *Hoja 3 → map_data*
+  Tabla que alimenta la gráfica de mapa (datos origen -> tblPost )
+
+  ## 📄  *Hoja 4 → Dashboard*
+  KPI y gráficas con segmentadores
+
+
+# 📊 Análisis Descriptivo Inicial del Dataset
 
 Este dataset recoge información sobre publicaciones virales en varias redes sociales. Incluye datos temporales, temáticos, geográficos y métricas de interacción, lo que permite entender cómo se comporta el contenido digital en diferentes plataformas.
 
-🗓️ 1. Dimensión temporal (Post_Date)
+## 🗓️ *1. Dimensión temporal (Post_Date)*
 
 La fecha de publicación permite:
 
@@ -13,7 +36,7 @@ La fecha de publicación permite:
 - Relacionar picos de viralidad con eventos o momentos concretos.
 - Aporta contexto y orden cronológico al comportamiento del contenido.
 
-📱 2. Plataforma (TikTok, Instagram, Twitter, YouTube)
+## 📱 *2. Plataforma (TikTok, Instagram, Twitter, YouTube)*
 
 Cada plataforma tiene algoritmos, formatos y audiencias distintas. Esto permite:
 
@@ -21,7 +44,7 @@ Cada plataforma tiene algoritmos, formatos y audiencias distintas. Esto permite:
 - Ver dónde se concentra el contenido viral.
 - Detectar qué formatos funcionan mejor en cada plataforma.
 
-🔥 3. Hashtags (temas o tendencias)
+## 🔥 *3. Hashtags (temas o tendencias)*
 
 Los hashtags clasifican el contenido por temática. Gracias a ellos se puede:
 
@@ -29,7 +52,7 @@ Los hashtags clasifican el contenido por temática. Gracias a ellos se puede:
 - Analizar qué categorías generan más interacción.
 - Detectar patrones de viralidad asociados a tendencias (#Gaming, #Education, #Comedy, etc.).
 
-🎬 4. Tipo de contenido (Content_Type)
+## 🎬 *4. Tipo de contenido (Content_Type)*
 
 Incluye formatos como Video, Shorts, Reel, Post, Live Stream o Tweet. Permite:
 
@@ -37,7 +60,7 @@ Incluye formatos como Video, Shorts, Reel, Post, Live Stream o Tweet. Permite:
 - Ver qué tipo de contenido genera más interacción.
 - Analizar la evolución de formatos cortos vs. largos.
 
-🌍 5. Región
+## 🌍 *5. Región*
 
 La región añade una dimensión geográfica que permite:
 
@@ -45,7 +68,7 @@ Identificar mercados con mayor viralidad.
 Comparar comportamientos entre países.
 Detectar si ciertos temas funcionan mejor en regiones específicas.
 
-📈 6. Métricas cuantitativas (Views, Likes, Shares, Comments)
+## 📈 *6. Métricas cuantitativas (Views, Likes, Shares, Comments)*
 
 Estas métricas miden el rendimiento de cada publicación:
 
@@ -67,7 +90,7 @@ También permiten calcular indicadores derivados como:
 - Ratio de compartidos por visualización
 - Comentarios por like
 
-⭐ 7. Engagement_Level (Low, Medium, High)
+## ⭐ *7. Engagement_Level (Low, Medium, High)*
 
 Clasifica el rendimiento global de cada publicación. Es útil para:
 
@@ -76,7 +99,7 @@ Clasifica el rendimiento global de cada publicación. Es útil para:
 - Detectar patrones comunes en publicaciones de alto engagement.
 
 
-🧩 ¿Qué aporta este dataset en conjunto?
+## 🧩 *¿Qué aporta este dataset en conjunto?*
 
 Este dataset permite:
 
@@ -95,7 +118,7 @@ En resumen, es un dataset rico, multidimensional y muy útil para análisis de t
 - Estudios de comportamiento por plataforma o región
 
 
-📊 ESTRUCTURA GENERAL DEL DASHBOARD
+# 🚀 Dashboard
 
 El dashboard responderá a 4 preguntas clave:
 
@@ -104,126 +127,79 @@ El dashboard responderá a 4 preguntas clave:
 - ¿Qué temas (hashtags) generan más engagement?
 - ¿Dónde (región) se genera más viralidad?
 
-🔹 KPIs PRINCIPALES (Parte superior del Dashboard)
+## 📉  KPIs 
 
-- Total Views
-- Total Likes
-- Total Shares
-- Total Comments
-- Engagement Rate promedio  
-  ( (Likes + Shares + Comments) / Views )
-- % Posts High Engagement
-
-
-# LAS 10 GRÁFICAS / TABLAS
-
-1️⃣ **Evolución de Views en el tiempo**
-
-- **Tipo:** Gráfico de líneas  
-- **Eje X:** Año-Mes (derivado de Post_Date)  
-- **Valores:** SUM de Views  
-- **Objetivo:** Ver tendencia de alcance.
-
-2️⃣ **Evolución del Engagement Rate en el tiempo**
-
-- **Tipo:** Línea  
-- **Valores:** Engagement Rate promedio por mes  
-- Permite ver calidad vs volumen.
-
-3️⃣ **Views por Plataforma**
-
-- **Tipo:** Columnas agrupadas  
-- **Eje:** Platform  
-- **Valores:** SUM Views  
-- Respuesta: dónde hay mayor alcance.
-
-4️⃣ **Engagement Rate por Plataforma**
-
-- **Tipo:** Columnas  
-- **Eje:** Platform  
-- **Valores:** Engagement Rate promedio  
-- Detecta qué plataforma convierte mejor.
-
-5️⃣ **Engagement Level — Distribución**
-
-- **Tipo:** Torta o barra horizontal  
-- **Eje:** Engagement_Level  
-- **Valores:** Conteo de Post_ID  
-- Muestra proporción Low / Medium / High.
-
-6️⃣ **Top 10 Hashtags por Views**
-
-- **Tipo:** Barra horizontal  
-- **Eje:** Hashtag  
-- **Valores:** SUM Views  
-- **Filtro:** Top 10  
-- Detecta temas virales.
-
-7️⃣ **Engagement Rate por Content_Type**
-
-- **Tipo:** Columnas  
-- **Eje:** Content_Type  
-- **Valores:** Engagement Rate promedio  
-- Responde qué formato funciona mejor.
-
-8️⃣ **Interacciones promedio por formato**
-
-- **Tipo:** Columnas apiladas  
-- **Valores:**  
-  - Likes promedio  
-  - Shares promedio  
-  - Comments promedio  
-- **Agrupado por:** Content_Type  
-- Permite ver patrones de comportamiento.
-
-9️⃣ **Views por Región**
-
-- **Tipo:** Mapa (Excel 365) o barras  
-- **Eje:** Region  
-- **Valores:** SUM Views  
-- Detecta mercados más fuertes.
-
-🔟 **Relación Views vs Engagement**
-
-- **Tipo:** Dispersión  
-- **Eje X:** Views  
-- **Eje Y:** Engagement Rate  
-- **Cada punto:** un Post  
-- Útil para detectar outliers y analizar si más views implican mejor engagement.
+KPI	                        Tabla Dinámica
+- Total Views	                PT_KPI_TotalViews
+- Total Likes	                PT_KPI_TotalLikes
+- Total Shares	              PT_KPI_TotalShares
+- Total Comments	            PT_KPI_TotalComments
+- Engagement Rate Promedio	  PT_KPI_AvgEngRate
+- % Posts High Engagement	    PT_KPI_PctHighEng
 
 
-# 🎛 Segmentadores 
+## 📈 Gráficas
+### *GRÁFICA 1 — Views Trend by Quarter*
 
-Agrega 4 slicers:
+How is total reach evolving over time?
+PT_TR_ViewsByQuarter
 
-- Platform
-- Hashtag
-- Content_Type
-- Region
+### *GRÁFICA 2 — Engagement Rate Trend by Quarter*
+
+La primera mostraba volumen, ésta muestra calidad.
+PT_TR_EngRateByQuarter
+
+### *GRÁFICA 3 — Views by Platform*
+
+Which platform generates the highest reach?
+PT_ANL_ViewsByPlatform
+
+### *GRÁFICA 4 — Engagement Rate by Platform*
+
+Which platform generates better engagement quality?
+PT_ANL_EngRateByPlatform
+
+### *GRÁFICA 5 — Engagement Level Distribution*
+
+What is the distribution of post performance?
+PT_DIST_EngLevel
+
+### *GRÁFICA 6 — Views by Hashtag*
+
+How does reach compare across all content themes?
+PT_ANL_ViewsByHashtag
+
+### *GRÁFICA 7 — Engagement Rate by Content Type*
+
+Which content format generates better engagement quality?
+PT_ANL_EngRateByContent
+
+### *GRÁFICA 8 — Average Interactions by Content Type*
+
+How do interaction types behave by format?
+PT_ANL_AvgInteractionsByContent
+
+### *GRÁFICA 9 — Views by Region*
+
+Which regions generate the highest reach?
+PT_ANL_ViewsByRegion
+
+### *GRÁFICA 10 — Views vs Engagement Rate*
+
+¿Más views significa mejor engagement?
+
+
+## 🎛 Segmentadores 
+
+slicers:
+
+- Platform			SLR_FLT_Platform
+- Hashtag			  SLR_FLT_Hashtag
+- Content_Type	SLR_FLT_ContentType
+- Region			  SLR_FLT_Region
 
 Todos conectados a todas las tablas dinámicas. 
 Esto, permite tener un dashboard interactivo.
 
-# 🧱 ESTRUCTURA DE HOJAS
 
-- **Hoja 1 → tblPosts**  
-  Tabla estructurada
-
-- **Hoja 2 → dat_validaciones**  
-Validación de datos originales: quitar duplicados, validar que no contenga datos vacios, etc.
-
-- **Hoja 3 → Base_Pivot**
-Tablas dinámicas que alimentan al dashboard
-
-- **Hoja 34 → Dashboard**
-
-# 📐 Métrica clave creadas en la tabla original
-
-Columnas nuevas (calculadas):
-
-**Interactions =** Likes + Shares + Comments
-
-**Engagement_Rate =**  Interactions / Views
-
-**Year_Month =**  @Post_Date pero en formato aaaa-mm
-
+# 📝 Análisis final, interpretación del dashboard
