@@ -126,6 +126,8 @@ En resumen, es un dataset rico, multidimensional y muy útil para análisis de t
 
 # 🚀 Dashboard
 
+<img src="ecalderonf_dashboard.png" alt="Dashboard de análisis" width="600">
+
 El dashboard responderá a 4 preguntas clave:
 
 - ¿Cómo evoluciona el rendimiento en el tiempo?
