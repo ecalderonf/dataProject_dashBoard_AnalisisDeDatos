@@ -1,5 +1,8 @@
 # dataProject_dashBoard_AnalisisDeDatos
 
+Dataset Cleaned_Viral_Social_Media_Trends.csv 
+analizado por Eduardo Calderón Flores.
+
 # 🧱 Estructura del fichero excel
 
   ## 📄  *Hoja 1 → tblPosts* 
