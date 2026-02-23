@@ -19,7 +19,10 @@
   ## 📄  *Hoja 3 → map_data*
   Tabla que alimenta la gráfica de mapa (datos origen -> tblPost )
 
-  ## 📄  *Hoja 4 → Dashboard*
+  ## 📄  *Hoja 4 → Scatter_Data*
+  Tabla que alimenta la gráfica de scatter (datos origen -> tblPost )
+
+  ## 📄  *Hoja 5 → Dashboard*
   KPI y gráficas con segmentadores
 
 
@@ -182,11 +185,11 @@ PT_ANL_AvgInteractionsByContent
 ### *GRÁFICA 9 — Views by Region*
 
 Which regions generate the highest reach?
-PT_ANL_ViewsByRegion
+map_data (PT_GEO_RegionPerformance)
 
 ### *GRÁFICA 10 — Views vs Engagement Rate*
-
 ¿Más views significa mejor engagement?
+Scatter_Data (PT_GEO_RegionPerformance)
 
 
 ## 🎛 Segmentadores 
@@ -202,4 +205,102 @@ Todos conectados a todas las tablas dinámicas.
 Esto, permite tener un dashboard interactivo.
 
 
-# 📝 Análisis final, interpretación del dashboard
+# Executive Summary — Social Media Performance Dashboard
+El dashboard permite identificar dónde invertir, optimizar o escalar estratégicamente.
+
+## 1️⃣ Tendencia Temporal (Views by Quarter)
+
+Se observan trimestres con picos claros de alcance, lo que indica estacionalidad en el consumo.
+
+Algunos quarters concentran gran parte del volumen total, lo que sugiere campañas o tendencias puntuales.
+
+No hay una caída estructural sostenida, lo que indica estabilidad en la generación de alcance.
+
+Interpretación:
+La performance depende más de momentos estratégicos que de un crecimiento lineal continuo.
+
+## 2️⃣ Plataforma (Platform Performance)
+
+No todas las plataformas convierten alcance en engagement al mismo nivel.
+
+Algunas muestran alto volumen de views pero menor engagement rate.
+
+Otras, con menor alcance, presentan mayor eficiencia en interacción.
+
+Insight clave:
+Alcance ≠ Calidad de interacción.
+Hay plataformas que funcionan mejor para visibilidad y otras para engagement.
+
+## 3️⃣ Hashtags (Content Themes)
+
+Algunos hashtags concentran gran parte del engagement.
+
+Los temas más virales no siempre son los que más engagement generan.
+
+Existe concentración temática (pocos hashtags explican gran parte del rendimiento).
+
+Insight estratégico:
+Conviene priorizar los hashtags que combinan alcance + engagement, no solo volumen.
+
+## 4️⃣ Tipo de Contenido (Content Type)
+
+Los formatos cortos (Shorts/Reels) tienden a generar alto alcance.
+
+Los formatos más interactivos (Live / Video) muestran engagement relativamente más fuerte.
+
+No todos los formatos se comportan igual en todas las plataformas.
+
+Insight:
+El formato influye directamente en el tipo de interacción que se obtiene.
+
+## 5️⃣ Distribución de Engagement Level
+
+La mayoría de posts se concentran en nivel Medium.
+
+Los High Engagement son menos frecuentes pero explican una parte relevante del impacto total.
+
+Existe margen para optimizar hacia una mayor proporción de High.
+
+Insight:
+El éxito alto es posible pero no dominante; hay oportunidad clara de optimización.
+
+## 6️⃣ Análisis Geográfico (Mapa)
+
+Algunos países concentran gran volumen de views.
+
+No todos los países con alto alcance presentan alto engagement.
+
+Existen mercados “eficientes” (menos views pero mayor tasa de interacción).
+
+Insight estratégico:
+Los mercados prioritarios pueden definirse por eficiencia, no solo por volumen.
+
+## 7️⃣ Reach vs Engagement (Scatter Analysis)
+
+El gráfico de dispersión permite identificar cuatro escenarios:
+
+Alto alcance + Alto engagement
+→ Mercados ideales. Mantener o aumentar inversión.
+
+Alto alcance + Bajo engagement
+→ Problema potencial de contenido o segmentación.
+
+Bajo alcance + Alto engagement
+→ Oportunidad de escalar inversión.
+
+Bajo alcance + Bajo engagement
+→ Bajo impacto estratégico.
+
+El valor de R² muestra que la correlación entre views y engagement no es perfecta, confirmando que la viralidad no garantiza interacción.
+
+# 🎯 Conclusiones Generales
+
+El rendimiento depende más del tipo de contenido y la plataforma que del volumen bruto.
+
+Engagement no está directamente correlacionado con views.
+
+Existen oportunidades claras de optimización por:
+
+- Plataforma
+- Hashtag
+- Región
